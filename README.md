@@ -10,4 +10,4 @@ Componenti del gruppo:
 - Valerio Icardi
 
 ## Homework 1 - Needfinding
-Clicca [qui](https://gabrielecrimella.github.io/HCI_project/H1/H1-Needfinding.pdf) per scaricare la presentazione del needfinding.
+Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C1/H1-Needfinding.pdf) per scaricare la presentazione del needfinding.
