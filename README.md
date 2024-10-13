@@ -7,3 +7,4 @@ Componenti del gruppo:
 - Erica Donno
 - Davide Faccini
 - Tasnem El Koush
+- Valerio Icardi
