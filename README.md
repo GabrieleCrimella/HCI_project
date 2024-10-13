@@ -1,4 +1,4 @@
-# HCI_project
+# Tastiere Empatiche
 
 Componenti del gruppo:
 - Anna Cordioli
