@@ -12,5 +12,5 @@ Componenti del gruppo:
 ## Homework 1 - Needfinding
 Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C1/H1-Needfinding.pdf) per scaricare la presentazione del needfinding
 
-## HOmework 2 - Refinement
-Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C1/HW2-Refinement.pdf) per scaricare la presentazione del refinement
+## Homework 2 - Refinement
+Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C2/HW2-Refinement.pdf) per scaricare la presentazione del refinement
