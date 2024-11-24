@@ -139,6 +139,20 @@
 
 
         </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <style>
+            /* Stile per l'immagine nella parte inferiore */
+            .image-strip {
+                background-image: url('assets/mani.png'); /* Sostituisci con il percorso della tua immagine */
+                background-repeat: repeat-x; /* Ripete l'immagine orizzontalmente */
+                background-size: contain; /* Ridimensiona l'immagine per mantenerla visibile senza distorsioni */
+                height: 250px; /* Altezza dell'immagine, puoi modificarla a piacere */
+                width: 100%; /* L'immagine occupa tutta la larghezza */
+                /*margin-top: 20px; /* Spazio opzionale sopra l'immagine */
+            }
+        </style>
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -148,24 +162,25 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#progetti">Progetti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#value">Value proposition</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#risorse">Risorse</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Header-->
-        <header class="bg-primary bg-gradient text-white">
+        <header class="bg-primary bg-gradient text-white" id="home">
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder custom-title">VoluntEasy</h1>
                 <p class="lead custom-subtitle">E se aiutare fosse facile?</p>
                 <a class="btn btn-lg btn-light" href="#about">Vai al prototipo finale!</a>
             </div>
+            <div class="image-strip"></div> <!-- Div per l'immagine -->
         </header>
 
         <!-- Sezione Timeline Orizzontale -->
-        <section id="timeline-section" class="py-5 bg-light text-dark">
+        <section id="progetti" class="py-5 bg-light text-dark">
             <div class="container">
                 <h2 class="text-center mb-5">Le fasi progettuali</h2>
                 <div class="timeline-horizontal d-flex align-items-center justify-content-center">
@@ -229,11 +244,11 @@
 
 
         <!-- About section-->
-        <section id="about">
+        <section id="value">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-dark">About this page</h2>
+                        <h2 class="text-dark">IL LOGO E LA VALUE PROPOSITION</h2>
                         <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
                         <ul>
                             <li>Clickable nav links that smooth scroll to page sections</li>
@@ -246,30 +261,90 @@
             </div>
         </section>
         <!-- Services section-->
-        <section class="bg-light" id="services">
+        <section class="bg-light" id="risorse">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-dark">Services we offer</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <h2 class="text-dark">RISORSE AGGIUNTIVE</h2>
+                        <div class="row align-items-center">
+                            <!-- Testo che occupa 2/3 -->
+                            <div class="col-lg-8">
+                                <p class="lead">
+                                    Crediamo nell'importanza di condividere il materiale sviluppato durante il percorso che ci ha portati alla realizzazione di questo prototipo.
+                                    Nella nostra repository GitHub troverete tutti i materiali prodotti nelle diverse fasi del progetto, per consentire a chiunque di approfondire, collaborare o prendere spunto per nuove idee.
+                                </p>
+                            </div>
+                            <!-- Pulsante che occupa 1/3 -->
+                            <div class="col-lg-4 text-center">
+                                <a href="https://github.com/GabrieleCrimella/HCI_project" class="btn btn-primary d-flex flex-column align-items-center justify-content-center" style="height: 100px;margin-left: 25px;margin-right: 25px;">
+                                    <i class="bi bi-github" style="font-size: 2rem;"></i> <!-- Icona -->
+                                    <span class="mt-2">Vai alla repository</span> <!-- Label -->
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Contact section-->
-        <section id="contact">
+        <section id="team">
             <div class="container px-4">
+                <!-- Titolo -->
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-dark">Contact us</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-dark">IL NOSTRO TEAM</h2>
+                        <p class="lead">Uniti dalla passione e guidati dall'impegno, abbiamo lavorato insieme per trasformare l'aiuto in un gesto semplice e naturale.</p>
+                    </div>
+                </div>
+                <!-- Due colonne -->
+                <div class="row gx-4 mt-4 align-items-center">
+                    <!-- Colonna sinistra: Foto di gruppo -->
+                    <div class="col-md-6 text-center">
+                        <img src="assets/foto%20di%20gruppo%20tastiere%20empatiche.jpeg" alt="Foto di gruppo" class="img-fluid rounded shadow">
+                    </div>
+                    <!-- Colonna destra: Elenco partecipanti -->
+                    <div class="col-md-6">
+                        <!-- <h4 class="text-dark text-center mb-4">Partecipanti</h4> -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Anna Cordioli</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Gabriele Crimella</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Loreto Del Vecchio</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Erica Donno</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Tasnem El Koush</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Davide Faccini</span>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-person-fill text-primary me-3"></i>
+                                <span class="fw-bold">Valerio Ilardi</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
+
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+            <div class="container px-4"><p class="m-0 text-center text-white">Volunteasy - Politecnico di Milano</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
