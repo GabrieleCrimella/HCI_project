@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>VoluntEasy - Tastiere Empatiche</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/logo.jpg" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
@@ -17,18 +17,22 @@
             .custom-title {
                 font-family: 'Futura', cursive;
                 font-size: 5rem;
-                text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px rgba(255, 255, 255, 0.5);
-                margin-bottom: 0.5rem;
+                text-shadow: 3px 3px 8px rgb(255, 255, 255), -1px -1px 2px rgb(255, 255, 255);
+                /*margin-bottom: 0.5rem;*/
                 letter-spacing: 1px;
+                color: #7dac5d;
             }
 
             /* Stili personalizzati per il sottotitolo */
             .custom-subtitle {
                 font-family: 'Poppins', sans-serif;
                 font-weight: 300;
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 margin-top: 10px;
-                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                font-style: inherit;
+                text-shadow: 1px 1px 3px rgb(255, 255, 255);
+                color: #7dac5d;
+                margin-bottom: 40px;
             }
 
             .card-stagger {
@@ -144,13 +148,32 @@
         <style>
             /* Stile per l'immagine nella parte inferiore */
             .image-strip {
-                background-image: url('assets/mani.png'); /* Sostituisci con il percorso della tua immagine */
+                background-image: url('assets/mani2.png'); /* Sostituisci con il percorso della tua immagine */
                 background-repeat: repeat-x; /* Ripete l'immagine orizzontalmente */
                 background-size: contain; /* Ridimensiona l'immagine per mantenerla visibile senza distorsioni */
                 height: 250px; /* Altezza dell'immagine, puoi modificarla a piacere */
                 width: 100%; /* L'immagine occupa tutta la larghezza */
                 /*margin-top: 20px; /* Spazio opzionale sopra l'immagine */
             }
+
+            /* Stile per lo spazio del logo */
+            /* Stile per l'immagine del logo */
+            .logo-img {
+                width: 150px; /* Dimensione dell'immagine */
+                height: auto; /* Mantiene le proporzioni */
+                float: left; /* Posiziona l'immagine a sinistra del testo */
+                margin-right: 15px; /* Spazio tra immagine e testo */
+                border: 4px solid #000; /* Bordo nero */
+                border-radius: 20px; /* Bordo arrotondato */
+            }
+
+            /* Assicura visibilità del testo */
+            .logo-paragraph {
+                overflow: hidden; /* Evita sovrapposizioni */
+                line-height: 1.6; /* Migliora la leggibilità */
+            }
+
+
         </style>
 
     </head>
@@ -158,7 +181,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand custom-title" href="#page-top" style="font-size: large">VoluntEasy</a>
+                <a class="navbar-brand custom-title" href="#page-top" style="font-size: large; color: white;">VoluntEasy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -170,11 +193,11 @@
                 </div>
             </div>
         </nav>
-        <header class="bg-primary bg-gradient text-white" id="home">
+        <header class="bs-light bg-gradient text-white" id="home">
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder custom-title">VoluntEasy</h1>
                 <p class="lead custom-subtitle">E se aiutare fosse facile?</p>
-                <a class="btn btn-lg btn-light" href="#about">Vai al prototipo finale!</a>
+                <a class="btn btn-lg btn-light" href="https://www.figma.com/design/TQMTKe53RAYr9ip8GlkTO8/Prototipo-app?node-id=602-4515&t=lyKEb6meVEoJKJok-1">Vai al prototipo finale!</a>
             </div>
             <div class="image-strip"></div> <!-- Div per l'immagine -->
         </header>
@@ -189,7 +212,7 @@
                         <div class="timeline-badge">1</div>
                         <div class="timeline-content">
                             <h4>Needfinding</h4>
-                            <p>Interviste e osservazioni ci hanno permesso di identificare e sintetizzare i bisogni degli utenti, includendo prospettive diverse per una visione inclusiva.</p>
+                            <p>Interviste e questionari ci hanno permesso di identificare i bisogni degli utenti</p>
                             <a href="C1/H1-Needfinding.pdf" class="btn btn-light border">Scarica il PDF</a>
                         </div>
                     </div>
@@ -200,7 +223,7 @@
                         <div class="timeline-badge">2</div>
                         <div class="timeline-content">
                             <h4>Raffinamento</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Fase di rilettura e sintesi dei dati racconti</p>
                             <a href="C2/HW2-Refinement.pdf" class="btn btn-light border">Scarica il PDF</a>
                         </div>
                     </div>
@@ -211,7 +234,7 @@
                         <div class="timeline-badge">3</div>
                         <div class="timeline-content">
                             <h4>Storyboard</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Ricerca dei task da sviluppare e analisi approfondita</p>
                             <a href="C3/HW3-TaskAnalysis&LowFidelity.pdf" class="btn btn-light border">Scarica il PDF</a>
                         </div>
                     </div>
@@ -222,7 +245,7 @@
                         <div class="timeline-badge">4</div>
                         <div class="timeline-content">
                             <h4>Prototipo low fidelity</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Prima bozza di applicazione generale</p>
                             <a class="btn btn-light border" disabled title="Disponibile prossimamente">Scarica il PDF</a>
                         </div>
                     </div>
@@ -231,9 +254,9 @@
                     <!-- Elemento 5 -->
                     <div class="timeline-item">
                         <div class="timeline-badge">5</div>
-                        <div class="timeline-content">
+                        <div class="timeline-content" style="width: 250px">
                             <h4>Prototipo medium fidelity</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Raffinamento del low fidelity con implementazioni aggiuntive</p>
                             <a class="btn btn-light border" disabled title="Disponibile prossimamente">Scarica il PDF</a>
                         </div>
                     </div>
@@ -247,12 +270,17 @@
         <section id="value">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
+                    <!-- Colonna sinistra: Il nostro logo -->
                     <div class="col-lg-6">
                         <h2 class="text-dark">IL NOSTRO LOGO</h2>
-                        <p class="lead">Il logo di <b>VoluntEasy</b> combina semplicità e innovazione per rappresentare la nostra missione: <b>rendere il volontariato più accessibile e intuitivo per tutti</b>. Il design è pensato per essere moderno e accattivante, parlando il linguaggio visivo delle nuove generazioni, abituate a interagire con strumenti digitali.</p>
+                        <div class="logo-paragraph">
+                            <img src="assets/logo.jpg" alt="Logo VoluntEasy" class="logo-img">
+                            <p class="lead">Il logo di <b>VoluntEasy</b> combina semplicità e innovazione per rappresentare la nostra missione: <b>rendere il volontariato più accessibile e intuitivo per tutti</b>. Il design è pensato per essere moderno e accattivante, parlando il linguaggio visivo delle nuove generazioni, abituate a interagire con strumenti digitali.</p>
+                        </div>
                         <p class="lead">Il nostro logo trasmette un messaggio di <b>connessione</b> e <b>inclusione</b>, simboleggiando il ponte che costruiamo tra volontari e associazioni.</p>
-
                     </div>
+
+                    <!-- Colonna destra: La nostra value proposition -->
                     <div class="col-lg-6">
                         <h2 class="text-dark">LA NOSTRA VALUE PROPOSITION</h2>
                         <p class="lead"><b>VoluntEasy</b> nasce dall’unione di “volunteer” e “easy” per comunicare chiaramente la nostra missione: <b>semplificare l’interazione tra volontari e organizzazioni</b>.</p>
@@ -261,6 +289,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Services section-->
         <section class="bg-light" id="risorse">
             <div class="container px-4">
