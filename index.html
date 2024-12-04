@@ -1,383 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>VoluntEasy - Tastiere Empatiche</title>
-        <link rel="icon" type="image/x-icon" href="assets/logo.jpg" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-            /* Font inline import */
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Sacramento&display=swap');
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>VoluntEasy - Tastiere Empatiche</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.jpg"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet"/>
+    <style>
+        /* Font inline import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Sacramento&display=swap');
 
-            /* Stili personalizzati per il titolo */
-            .custom-title {
-                font-family: 'Futura', cursive;
-                font-size: 5rem;
-                text-shadow: 3px 3px 8px rgb(255, 255, 255), -1px -1px 2px rgb(255, 255, 255);
-                /*margin-bottom: 0.5rem;*/
-                letter-spacing: 1px;
-                color: #7dac5d;
-            }
+        /* Stili personalizzati per il titolo */
+        .custom-title {
+            font-family: 'Futura', cursive;
+            font-size: 5rem;
+            text-shadow: 3px 3px 8px rgb(255, 255, 255), -1px -1px 2px rgb(255, 255, 255);
+            /*margin-bottom: 0.5rem;*/
+            letter-spacing: 1px;
+            color: #7dac5d;
+        }
 
-            /* Stili personalizzati per il sottotitolo */
-            .custom-subtitle {
-                font-family: 'Poppins', sans-serif;
-                font-weight: 300;
-                font-size: 1.8rem;
-                margin-top: 10px;
-                font-style: inherit;
-                text-shadow: 1px 1px 3px rgb(255, 255, 255);
-                color: #7dac5d;
-                margin-bottom: 40px;
-            }
+        /* Stili personalizzati per il sottotitolo */
+        .custom-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 1.8rem;
+            margin-top: 10px;
+            font-style: inherit;
+            text-shadow: 1px 1px 3px rgb(255, 255, 255);
+            color: #7dac5d;
+            margin-bottom: 40px;
+        }
 
+        .card-stagger {
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Effetto hover per sollevare la card */
+        .card-stagger:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sfalsamento alternato a sinistra e destra */
+        .card-stagger:nth-of-type(odd) {
+            margin-left: -20px;
+        }
+
+        .card-stagger:nth-of-type(even) {
+            margin-right: -20px;
+        }
+
+        /* Media query per migliorare la visualizzazione sui dispositivi mobili */
+        @media (max-width: 768px) {
             .card-stagger {
-                border-radius: 15px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
-                position: relative;
+                margin-left: 0;
+                margin-right: 0;
             }
-
-            /* Effetto hover per sollevare la card */
-            .card-stagger:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            }
-
-            /* Sfalsamento alternato a sinistra e destra */
-            .card-stagger:nth-of-type(odd) {
-                margin-left: -20px;
-            }
-
-            .card-stagger:nth-of-type(even) {
-                margin-right: -20px;
-            }
-
-            /* Media query per migliorare la visualizzazione sui dispositivi mobili */
-            @media (max-width: 768px) {
-                .card-stagger {
-                    margin-left: 0;
-                    margin-right: 0;
-                }
-            }
+        }
 
 
-            /* Timeline Orizzontale */
+        /* Timeline Orizzontale */
+        .timeline-horizontal {
+            display: flex;
+            gap: 1rem; /* Spaziatura tra gli elementi */
+            position: relative;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Linea Orizzontale */
+        .timeline-line {
+            width: 50px;
+            height: 6px;
+            background-color: #7dac5d; /* Verde celeaton */
+            align-self: center;
+        }
+
+        /* Elementi della Timeline */
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Badge Numerati */
+        .timeline-badge {
+            width: 50px;
+            height: 50px;
+            background-color: #7dac5d; /* Verde celeaton */
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contenuto delle Card */
+        .timeline-content {
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #7dac5d; /* Verde celeaton */
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pulsanti */
+        .timeline-content .btn {
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive per Mobile */
+        @media (max-width: 768px) {
             .timeline-horizontal {
-                display: flex;
-                gap: 1rem; /* Spaziatura tra gli elementi */
-                position: relative;
-                margin: 0 auto;
-                padding: 1rem;
-            }
-
-            /* Linea Orizzontale */
-            .timeline-line {
-                width: 50px;
-                height: 6px;
-                background-color: #7dac5d; /* Verde celeaton */
-                align-self: center;
-            }
-
-            /* Elementi della Timeline */
-            .timeline-item {
-                display: flex;
                 flex-direction: column;
-                align-items: center;
-                position: relative;
             }
 
-            /* Badge Numerati */
-            .timeline-badge {
-                width: 50px;
+            .timeline-line {
+                width: 6px;
                 height: 50px;
-                background-color: #7dac5d; /* Verde celeaton */
-                color: #fff;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-weight: bold;
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             }
+        }
 
-            /* Contenuto delle Card */
-            .timeline-content {
-                background-color: #fff;
-                color: #333;
-                border: 2px solid #7dac5d; /* Verde celeaton */
-                border-radius: 8px;
-                padding: 1rem;
-                text-align: center;
-                width: 200px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            /* Pulsanti */
-            .timeline-content .btn {
-                margin-top: 0.5rem;
-            }
-
-            /* Responsive per Mobile */
-            @media (max-width: 768px) {
-                .timeline-horizontal {
-                    flex-direction: column;
-                }
-                .timeline-line {
-                    width: 6px;
-                    height: 50px;
-                }
-            }
-
-             .btn[disabled] {
-                 cursor: not-allowed;
-                 opacity: 0.6;
-             }
+        .btn[disabled] {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
 
 
-        </style>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-        <style>
-            /* Stile per l'immagine nella parte inferiore */
-            .image-strip {
-                background-image: url('assets/mani2.png'); /* Sostituisci con il percorso della tua immagine */
-                background-repeat: repeat-x; /* Ripete l'immagine orizzontalmente */
-                background-size: contain; /* Ridimensiona l'immagine per mantenerla visibile senza distorsioni */
-                height: 250px; /* Altezza dell'immagine, puoi modificarla a piacere */
-                width: 100%; /* L'immagine occupa tutta la larghezza */
-                /*margin-top: 20px; /* Spazio opzionale sopra l'immagine */
-            }
+    <style>
+        /* Stile per l'immagine nella parte inferiore */
+        .image-strip {
+            background-image: url('assets/mani2.png'); /* Sostituisci con il percorso della tua immagine */
+            background-repeat: repeat-x; /* Ripete l'immagine orizzontalmente */
+            background-size: contain; /* Ridimensiona l'immagine per mantenerla visibile senza distorsioni */
+            height: 250px; /* Altezza dell'immagine, puoi modificarla a piacere */
+            width: 100%; /* L'immagine occupa tutta la larghezza */
+            /*margin-top: 20px; /* Spazio opzionale sopra l'immagine */
+        }
 
-            /* Stile per lo spazio del logo */
-            /* Stile per l'immagine del logo */
-            .logo-img {
-                width: 150px; /* Dimensione dell'immagine */
-                height: auto; /* Mantiene le proporzioni */
-                float: left; /* Posiziona l'immagine a sinistra del testo */
-                margin-right: 15px; /* Spazio tra immagine e testo */
-                border: 4px solid #000; /* Bordo nero */
-                border-radius: 20px; /* Bordo arrotondato */
-            }
+        /* Stile per lo spazio del logo */
+        /* Stile per l'immagine del logo */
+        .logo-img {
+            width: 150px; /* Dimensione dell'immagine */
+            height: auto; /* Mantiene le proporzioni */
+            float: left; /* Posiziona l'immagine a sinistra del testo */
+            margin-right: 15px; /* Spazio tra immagine e testo */
+            border: 4px solid #000; /* Bordo nero */
+            border-radius: 20px; /* Bordo arrotondato */
+        }
 
-            /* Assicura visibilità del testo */
-            .logo-paragraph {
-                overflow: hidden; /* Evita sovrapposizioni */
-                line-height: 1.6; /* Migliora la leggibilità */
-            }
+        /* Assicura visibilità del testo */
+        .logo-paragraph {
+            overflow: hidden; /* Evita sovrapposizioni */
+            line-height: 1.6; /* Migliora la leggibilità */
+        }
 
 
-        </style>
+    </style>
 
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-            <div class="container px-4">
-                <a class="navbar-brand custom-title" href="#page-top" style="font-size: large; color: white;">VoluntEasy</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#value">Value proposition</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#progetti">Progetti</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#risorse">Risorse</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    </ul>
+</head>
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+        <a class="navbar-brand custom-title" href="#page-top" style="font-size: large; color: white;">VoluntEasy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#value">Value proposition</a></li>
+                <li class="nav-item"><a class="nav-link" href="#progetti">Progetti</a></li>
+                <li class="nav-item"><a class="nav-link" href="#risorse">Risorse</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="bs-light bg-gradient text-white" id="home">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder custom-title">VoluntEasy</h1>
+        <p class="lead custom-subtitle">E se aiutare fosse facile?</p>
+        <a class="btn btn-lg btn-light"
+           href="https://www.figma.com/design/TQMTKe53RAYr9ip8GlkTO8/Prototipo-app?node-id=602-4515&t=lyKEb6meVEoJKJok-1">Vai
+            al prototipo finale!</a>
+    </div>
+    <div class="image-strip"></div> <!-- Div per l'immagine -->
+</header>
+
+<!-- About section-->
+<section id="value" class="bg-light">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <!-- Colonna sinistra: Il nostro logo -->
+            <div class="col-lg-6">
+                <h2 class="text-dark">IL NOSTRO LOGO</h2>
+                <div class="logo-paragraph">
+                    <img src="assets/logo.jpg" alt="Logo VoluntEasy" class="logo-img">
+                    <p class="lead">Il logo di VoluntEasy combina semplicità e innovazione per rappresentare al meglio
+                        la nostra missione: rendere il volontariato più accessibile e intuitivo per tutti. Il design,
+                        moderno e accattivante, è pensato per parlare il linguaggio visivo delle nuove generazioni,
+                        abituate a interagire con strumenti digitali.</p>
+                    <p class="lead">I colori scelti, verde e viola, richiamano quelli della nostra app, sottolineando la
+                        coerenza visiva tra la piattaforma e l’identità del progetto. Il verde evoca speranza, crescita
+                        e connessione con il territorio, mentre il viola rappresenta creatività, inclusività e il legame
+                        tra persone con obiettivi comuni.</p>
+                    <p class="lead">Le mani che si stringono al centro del logo sono un simbolo universale di aiuto
+                        reciproco, rappresentando il cuore del nostro impegno: costruire ponti tra volontari e
+                        associazioni. I colori diversi delle mani simboleggiano la neutralità e l’inclusività, perché il
+                        volontariato non ha barriere di razza, genere o cultura.</p>
+                    <p class="lead">Insieme, questi elementi raccontano il nostro desiderio di ispirare solidarietà e
+                        collaborazione, offrendo una piattaforma che renda più semplice darsi una mano, ovunque e in
+                        qualsiasi momento.</p>
+                </div>
+                <p class="lead">Il nostro logo trasmette un messaggio di <b>connessione</b> e <b>inclusione</b>,
+                    simboleggiando il ponte che costruiamo tra volontari e associazioni.</p>
+            </div>
+
+            <!-- Colonna destra: La nostra value proposition -->
+            <div class="col-lg-6">
+                <h2 class="text-dark">LA NOSTRA VALUE PROPOSITION</h2>
+                <p class="lead"><b>VoluntEasy</b> nasce dall’unione di “volunteer” e “easy” per comunicare chiaramente
+                    la nostra missione: <b>semplificare l’interazione tra volontari e organizzazioni</b>.</p>
+                <p class="lead">L’uso dell’inglese riflette il nostro <b>impegno a parlare una lingua globale, familiare
+                    ai giovani</b> e al mondo digitale, valorizzando innovazione e accessibilità. Offriamo una
+                    piattaforma moderna e intuitiva per rendere il volontariato un’esperienza facile e coinvolgente,
+                    favorendo una partecipazione sempre più ampia in un contesto interconnesso.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sezione Timeline Orizzontale -->
+<section id="progetti" class="py-5 text-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">Le fasi progettuali</h2>
+        <div class="timeline-horizontal d-flex align-items-center justify-content-center">
+            <!-- Elemento 1 -->
+            <div class="timeline-item">
+                <div class="timeline-badge">1</div>
+                <div class="timeline-content">
+                    <h4>Needfinding</h4>
+                    <p>Interviste e questionari ci hanno permesso di identificare i bisogni degli utenti</p>
+                    <a href="C1/H1-Needfinding.pdf" class="btn btn-lg btn-light">Scarica il PDF</a>
                 </div>
             </div>
-        </nav>
-        <header class="bs-light bg-gradient text-white" id="home">
-            <div class="container px-4 text-center">
-                <h1 class="fw-bolder custom-title">VoluntEasy</h1>
-                <p class="lead custom-subtitle">E se aiutare fosse facile?</p>
-                <a class="btn btn-lg btn-light" href="https://www.figma.com/design/TQMTKe53RAYr9ip8GlkTO8/Prototipo-app?node-id=602-4515&t=lyKEb6meVEoJKJok-1">Vai al prototipo finale!</a>
-            </div>
-            <div class="image-strip"></div> <!-- Div per l'immagine -->
-        </header>
-
-        <!-- About section-->
-        <section id="value" class="bg-light">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <!-- Colonna sinistra: Il nostro logo -->
-                    <div class="col-lg-6">
-                        <h2 class="text-dark">IL NOSTRO LOGO</h2>
-                        <div class="logo-paragraph">
-                            <img src="assets/logo.jpg" alt="Logo VoluntEasy" class="logo-img">
-                            <p class="lead">Il logo di <b>VoluntEasy</b> combina semplicità e innovazione per rappresentare la nostra missione: <b>rendere il volontariato più accessibile e intuitivo per tutti</b>. Il design è pensato per essere moderno e accattivante, parlando il linguaggio visivo delle nuove generazioni, abituate a interagire con strumenti digitali.</p>
-                        </div>
-                        <p class="lead">Il nostro logo trasmette un messaggio di <b>connessione</b> e <b>inclusione</b>, simboleggiando il ponte che costruiamo tra volontari e associazioni.</p>
-                    </div>
-
-                    <!-- Colonna destra: La nostra value proposition -->
-                    <div class="col-lg-6">
-                        <h2 class="text-dark">LA NOSTRA VALUE PROPOSITION</h2>
-                        <p class="lead"><b>VoluntEasy</b> nasce dall’unione di “volunteer” e “easy” per comunicare chiaramente la nostra missione: <b>semplificare l’interazione tra volontari e organizzazioni</b>.</p>
-                        <p class="lead">L’uso dell’inglese riflette il nostro <b>impegno a parlare una lingua globale, familiare ai giovani</b> e al mondo digitale, valorizzando innovazione e accessibilità. Offriamo una piattaforma moderna e intuitiva per rendere il volontariato un’esperienza facile e coinvolgente, favorendo una partecipazione sempre più ampia in un contesto interconnesso.</p>
-                    </div>
+            <!-- Linea -->
+            <div class="timeline-line"></div>
+            <!-- Elemento 2 -->
+            <div class="timeline-item">
+                <div class="timeline-badge">2</div>
+                <div class="timeline-content">
+                    <h4>Raffinamento</h4>
+                    <p>Fase di rilettura e sintesi dei dati racconti</p>
+                    <a href="C2/HW2-Refinement.pdf" class="btn btn-lg btn-light">Scarica il PDF</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Sezione Timeline Orizzontale -->
-        <section id="progetti" class="py-5 text-dark">
-            <div class="container">
-                <h2 class="text-center mb-5">Le fasi progettuali</h2>
-                <div class="timeline-horizontal d-flex align-items-center justify-content-center">
-                    <!-- Elemento 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-badge">1</div>
-                        <div class="timeline-content">
-                            <h4>Needfinding</h4>
-                            <p>Interviste e questionari ci hanno permesso di identificare i bisogni degli utenti</p>
-                            <a href="C1/H1-Needfinding.pdf" class="btn btn-lg btn-light">Scarica il PDF</a>
-                        </div>
-                    </div>
-                    <!-- Linea -->
-                    <div class="timeline-line"></div>
-                    <!-- Elemento 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-badge">2</div>
-                        <div class="timeline-content">
-                            <h4>Raffinamento</h4>
-                            <p>Fase di rilettura e sintesi dei dati racconti</p>
-                            <a href="C2/HW2-Refinement.pdf" class="btn btn-lg btn-light">Scarica il PDF</a>
-                        </div>
-                    </div>
-                    <!-- Linea -->
-                    <div class="timeline-line"></div>
-                    <!-- Elemento 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-badge">3</div>
-                        <div class="timeline-content">
-                            <h4>Storyboard</h4>
-                            <p>Ricerca dei task da sviluppare e analisi approfondita</p>
-                            <a href="C3/HW3-TaskAnalysis&LowFidelity.pdf" class="btn btn-lg btn-light">Scarica il PDF</a>
-                        </div>
-                    </div>
-                    <!-- Linea -->
-                    <div class="timeline-line"></div>
-                    <!-- Elemento 4 -->
-                    <div class="timeline-item">
-                        <div class="timeline-badge">4</div>
-                        <div class="timeline-content">
-                            <h4>Prototipo low fidelity</h4>
-                            <p>Prima bozza di applicazione generale</p>
-                            <a class="btn btn-lg btn-light" disabled title="Disponibile prossimamente">Scarica il PDF</a>
-                        </div>
-                    </div>
-                    <!-- Linea -->
-                    <div class="timeline-line"></div>
-                    <!-- Elemento 5 -->
-                    <div class="timeline-item">
-                        <div class="timeline-badge">5</div>
-                        <div class="timeline-content" style="width: 250px">
-                            <h4>Prototipo medium fidelity</h4>
-                            <p>Raffinamento del low fidelity con implementazioni aggiuntive</p>
-                            <a class="btn btn-lg btn-light" disabled title="Disponibile prossimamente">Scarica il PDF</a>
-                        </div>
-                    </div>
+            <!-- Linea -->
+            <div class="timeline-line"></div>
+            <!-- Elemento 3 -->
+            <div class="timeline-item">
+                <div class="timeline-badge">3</div>
+                <div class="timeline-content">
+                    <h4>Storyboard</h4>
+                    <p>Ricerca dei task da sviluppare e analisi approfondita</p>
+                    <a href="C3/HW3-TaskAnalysis&LowFidelity.pdf" class="btn btn-lg btn-light">Scarica il PDF</a>
                 </div>
             </div>
-        </section>
+            <!-- Linea -->
+            <div class="timeline-line"></div>
+            <!-- Elemento 4 -->
+            <div class="timeline-item">
+                <div class="timeline-badge">4</div>
+                <div class="timeline-content">
+                    <h4>Prototipo low fidelity</h4>
+                    <p>Prima bozza di applicazione generale</p>
+                    <a class="btn btn-lg btn-light" disabled title="Disponibile prossimamente">Scarica il PDF</a>
+                </div>
+            </div>
+            <!-- Linea -->
+            <div class="timeline-line"></div>
+            <!-- Elemento 5 -->
+            <div class="timeline-item">
+                <div class="timeline-badge">5</div>
+                <div class="timeline-content" style="width: 250px">
+                    <h4>Prototipo medium fidelity</h4>
+                    <p>Raffinamento del low fidelity con implementazioni aggiuntive</p>
+                    <a class="btn btn-lg btn-light" disabled title="Disponibile prossimamente">Scarica il PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-        <!-- Services section-->
-        <section class="bg-light" id="risorse">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
+<!-- Services section-->
+<section class="bg-light" id="risorse">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-dark">RISORSE AGGIUNTIVE</h2>
+                <div class="row align-items-center">
+                    <!-- Testo che occupa 2/3 -->
                     <div class="col-lg-8">
-                        <h2 class="text-dark">RISORSE AGGIUNTIVE</h2>
-                        <div class="row align-items-center">
-                            <!-- Testo che occupa 2/3 -->
-                            <div class="col-lg-8">
-                                <p class="lead">
-                                    Crediamo nell'importanza di condividere il materiale sviluppato durante il percorso che ci ha portati alla realizzazione di questo prototipo.
-                                    Nella nostra repository GitHub troverete tutti i materiali prodotti nelle diverse fasi del progetto, per consentire a chiunque di approfondire, collaborare o prendere spunto per nuove idee.
-                                </p>
-                            </div>
-                            <!-- Pulsante che occupa 1/3 -->
-                            <div class="col-lg-4 text-center">
-                                <a href="https://github.com/GabrieleCrimella/HCI_project" class="btn btn-primary d-flex flex-column align-items-center justify-content-center" style="height: 100px;margin-left: 25px;margin-right: 25px;">
-                                    <i class="bi bi-github" style="font-size: 2rem;"></i> <!-- Icona -->
-                                    <span class="mt-2">Vai alla repository</span> <!-- Label -->
-                                </a>
-                            </div>
-                        </div>
+                        <p class="lead">
+                            Crediamo nell'importanza di condividere il materiale sviluppato durante il percorso che ci
+                            ha portati alla realizzazione di questo prototipo.
+                            Nella nostra repository GitHub troverete tutti i materiali prodotti nelle diverse fasi del
+                            progetto, per consentire a chiunque di approfondire, collaborare o prendere spunto per nuove
+                            idee.
+                        </p>
+                    </div>
+                    <!-- Pulsante che occupa 1/3 -->
+                    <div class="col-lg-4 text-center">
+                        <a href="https://github.com/GabrieleCrimella/HCI_project"
+                           class="btn btn-primary d-flex flex-column align-items-center justify-content-center"
+                           style="height: 100px;margin-left: 25px;margin-right: 25px;">
+                            <i class="bi bi-github" style="font-size: 2rem;"></i> <!-- Icona -->
+                            <span class="mt-2">Vai alla repository</span> <!-- Label -->
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Contact section-->
-        <section id="team">
-            <div class="container px-4">
-                <!-- Titolo -->
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-dark">IL NOSTRO TEAM</h2>
-                        <p class="lead">Uniti dalla passione e guidati dall'impegno, abbiamo lavorato insieme per trasformare l'aiuto in un gesto semplice e naturale.</p>
-                    </div>
-                </div>
-                <!-- Due colonne -->
-                <div class="row gx-4 mt-4 align-items-center">
-                    <!-- Colonna sinistra: Foto di gruppo -->
-                    <div class="col-md-6 text-center">
-                        <img src="assets/foto%20di%20gruppo%20tastiere%20empatiche.jpeg" alt="Foto di gruppo" class="img-fluid rounded shadow">
-                    </div>
-                    <!-- Colonna destra: Elenco partecipanti -->
-                    <div class="col-md-6">
-                        <!-- <h4 class="text-dark text-center mb-4">Partecipanti</h4> -->
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Anna Cordioli</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Gabriele Crimella</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Loreto Del Vecchio</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Erica Donno</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Tasnem El Koush</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Davide Faccini</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center">
-                                <i class="bi bi-person-fill text-primary me-3"></i>
-                                <span class="fw-bold">Valerio Ilardi</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+<!-- Contact section-->
+<section id="team">
+    <div class="container px-4">
+        <!-- Titolo -->
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-dark">IL NOSTRO TEAM</h2>
+                <p class="lead">Uniti dalla passione e guidati dall'impegno, abbiamo lavorato insieme per trasformare
+                    l'aiuto in un gesto semplice e naturale.</p>
             </div>
-        </section>
+        </div>
+        <!-- Due colonne -->
+        <div class="row gx-4 mt-4 align-items-center">
+            <!-- Colonna sinistra: Foto di gruppo -->
+            <div class="col-md-6 text-center">
+                <img src="assets/foto%20di%20gruppo%20tastiere%20empatiche.jpeg" alt="Foto di gruppo"
+                     class="img-fluid rounded shadow">
+            </div>
+            <!-- Colonna destra: Elenco partecipanti -->
+            <div class="col-md-6">
+                <!-- <h4 class="text-dark text-center mb-4">Partecipanti</h4> -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Anna Cordioli</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Gabriele Crimella</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Loreto Del Vecchio</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Erica Donno</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Tasnem El Koush</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Davide Faccini</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="bi bi-person-fill text-primary me-3"></i>
+                        <span class="fw-bold">Valerio Ilardi</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container px-4"><p class="m-0 text-center text-white">Volunteasy - Politecnico di Milano</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container px-4"><p class="m-0 text-center text-white">Volunteasy - Politecnico di Milano</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+</body>
 </html>
