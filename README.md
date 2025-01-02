@@ -24,4 +24,4 @@ Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C3/HW3-TaskAnalysis&
 Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C6/VoluntEasy_H6-USABILITY_TESTING.pdf) per scaricare la presentazione su User Testing
 
 ## PRESENTAZIONE FINALE
-Clicca [qui](PRESENTAZIONE_FINALE/VoluntEasy_PRESENTAZIONE_FINALE.pdf) per scaricare la presentazione finale oppure premi [qui](https://www.canva.com/design/DAGawvvcp_c/_tf5pYWGOtWNZ4t0r9BEng/view?utm_content=DAGawvvcp_c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e42675af3) e visualizzare la presentaione con alcuni video dei prototipi!
+Clicca [qui](https://gabrielecrimella.github.io/HCI_project/PRESENTAZIONE_FINALE/VoluntEasy_PRESENTAZIONE_FINALE.pdf) per scaricare la presentazione finale oppure premi [qui](https://www.canva.com/design/DAGawvvcp_c/_tf5pYWGOtWNZ4t0r9BEng/view?utm_content=DAGawvvcp_c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e42675af3) e visualizzare la presentaione con alcuni video dei prototipi!
