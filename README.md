@@ -19,3 +19,9 @@ Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C2/HW2-Refinement.pd
 
 ## Homework 3 - TaskAnalysis & LowFidelity
 Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C3/HW3-TaskAnalysis&LowFidelity.pdf) per scaricare la presentazione su TaskAnalysis e LowFidelity
+
+## Homework 6 - Usability Testing
+Clicca [qui](https://gabrielecrimella.github.io/HCI_project/C6/VoluntEasy_HW6_USABILITY_TESTING.pdf) per scaricare la presentazione su User Testing
+
+## PRESENTAZIONE FINALE
+Clicca [qui](PRESENTAZIONE_FINALE/VoluntEasy_PRESENTAZIONE_FINALE.pdf) per scaricare la presentazione finale
